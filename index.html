@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buzz.su</title>
+  <!-- 引入 Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 引入 Font Awesome 图标 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind 配置 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gray: {
+              100: '#f5f5f5',
+              200: '#e5e5e5',
+              300: '#d4d4d4',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .link-btn {
+        @apply w-full max-w-md mx-auto py-3 px-4 bg-white rounded-lg shadow-sm flex items-center justify-center gap-3 text-sm font-medium text-gray-800 transition-all duration-200 hover:shadow-md hover:bg-gray-50;
+      }
+      .icon-link {
+        @apply text-gray-600 hover:text-gray-900 transition-colors;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-200 min-h-screen flex flex-col items-center justify-start pt-10 pb-16">
+  <!-- 头像 -->
+  <div class="relative mb-4">
+    <img src="https://via.placeholder.com/120/FF0000/FFFFFF?text=US+Flag" alt="Profile" class="w-24 h-24 rounded-full object-cover border-2 border-gray-300">
+  </div>
+
+  <!-- 用户名 -->
+  <h1 class="text-xl font-bold text-gray-900 mb-1">Buzz.su</h1>
+  <p class="text-sm text-gray-600 mb-6 text-center">F1 Formula 1 racing mug manufacturer.</p>
+
+  <!-- 社交图标 -->
+  <div class="flex items-center gap-4 mb-8">
+    <a href="https://wa.me/13412529300" target="_blank" class="icon-link"><i class="fab fa-whatsapp text-lg"></i></a>
+    <a href="https://www.instagram.com/corebottle.v/" target="_blank" class="icon-link"><i class="fab fa-instagram text-lg"></i></a>
+    <a href="https://t.me/cnbuzz" target="_blank" class="icon-link"><i class="fas fa-paper-plane text-lg"></i></a>
+  </div>
+
+  <!-- 链接按钮 -->
+  <div class="flex flex-col gap-4 w-full max-w-md px-4">
+    <a href="https://www.corebottle.com/" target="_blank" class="link-btn">
+      <i class="fas fa-globe text-gray-600"></i>
+      <span>Official website</span>
+      <i class="fas fa-ellipsis-ml text-gray-400 ml-auto"></i>
+    </a>
+    <a href="https://www.tiktok.com/@buzz.su?_r=1&_t=ZN-936kkNK98go" target="_blank" class="link-btn">
+      <i class="fab fa-tiktok text-gray-600"></i>
+      <span>@buzz.su</span>
+      <i class="fas fa-ellipsis-ml text-gray-400 ml-auto"></i>
+    </a>
+  </div>
+
+  <!-- 底部按钮 -->
+  <div class="mt-auto pt-12">
+    <button class="bg-white px-4 py-2 rounded-full text-xs text-gray-600 shadow-sm hover:shadow transition-all">
+      <i class="fas fa-crown text-yellow-500 mr-1"></i>
+    </button>
+  </div>
+</body>
+</html>
